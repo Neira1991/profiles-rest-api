@@ -25,7 +25,7 @@ SECRET_KEY = 'fw1ia3b__e#%78r5@3ij43pu#(y##^v%n^o=7oe-+3t!%dl)0t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.0','0.0.0.0']
 
 
 # Application definition
@@ -121,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = "profiles_api.UserProfile"
