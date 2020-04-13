@@ -2,6 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from profiles_api import serializers
+from .services import get_username
+from .services import get_teams_BQ
 
 
 class HelloApiView(APIView):
@@ -11,14 +13,8 @@ class HelloApiView(APIView):
 
     def get(self, request, format='None'):
         """Return a list of ApiView features"""
-        an_apiView = [
-            'Uses HTTP methods as functions (get, post, past, delete)',
-            'is similar to a traditional Django View',
-            'gives you the most control',
-            'is mapped manually to URLs',
-        ]
 
-        return Response({'message': 'Hello!', 'an_apiview': an_apiView})
+        return Response({'name': get_teams_BQ()})
 
     def post(self, request, format='None'):
         serializer = self.serializer_class(data=request.data)
