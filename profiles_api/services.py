@@ -25,14 +25,14 @@ def get_teams_BQ():
     # from google.cloud import bigquery
 
     # TODO(developer): Construct a BigQuery client object.
-    client = bigquery.Client()
+    #client = bigquery.Client()
 
     query = """
     SELECT *
     FROM ``
     LIMIT 10"""
 
-    query_job = client.query(query)  # Make an API request.
+    #query_job = client.query(query)  # Make an API request.
 
-    return query_job
+    return query
     # [END bigquery_query]

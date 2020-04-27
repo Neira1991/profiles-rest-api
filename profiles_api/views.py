@@ -14,7 +14,7 @@ class HelloApiView(APIView):
     def get(self, request, format='None'):
         """Return a list of ApiView features"""
 
-        return Response({'name': get_teams_BQ()})
+        return Response({'name': get_username()})
 
     def post(self, request, format='None'):
         serializer = self.serializer_class(data=request.data)
